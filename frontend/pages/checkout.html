@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kanya House of Sarees - Checkout</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo-section">
+
+        <img src="../assets/images/logo.png"
+             class="logo"
+             alt="Kanya Logo">
+
+        <h2>Kanya House of Sarees</h2>
+
+    </div>
+
+    <nav class="nav-icons">
+
+        <a href="index.html" class="nav-item">
+
+            <img src="../assets/images/home-button.png" alt="Home">
+
+            <span>Home</span>
+
+        </a>
+
+        <a href="products.html" class="nav-item">
+
+            <img src="../assets/images/product.png" alt="Products">
+
+            <span>Products</span>
+
+        </a>
+
+        <a href="category.html" class="nav-item">
+
+            <img src="../assets/images/categories.png" alt="Categories">
+
+            <span>Categories</span>
+
+        </a>
+
+        <a href="cart.html" class="nav-item">
+
+            <img src="../assets/images/shopping-cart.png" alt="Cart">
+
+            <span>Cart</span>
+
+        </a>
+
+        <a href="wishlist.html" class="nav-item">
+
+            <img src="../assets/images/favorite.png" alt="Wishlist">
+
+            <span>Wishlist</span>
+
+        </a>
+
+        <a href="profile.html" class="nav-item">
+
+            <img src="../assets/images/user-avatar.png" alt="Profile">
+
+            <span>Profile</span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+<!-- ================= CHECKOUT ================= -->
+
+<section class="checkout-page">
+
+    <h1>Checkout</h1>
+
+    <!-- ================= ORDER SUMMARY ================= -->
+
+    <div class="checkout-box">
+
+        <h2>Order Summary</h2>
+
+        <!-- JavaScript will display cart products here -->
+        <div id="checkoutItems">
+
+        </div>
+
+        <h3 class="total" id="checkoutTotal">
+
+            Total Amount: ₹0
+
+        </h3>
+
+    </div>
+
+    <!-- ================= DELIVERY ADDRESS ================= -->
+
+    <div class="checkout-box">
+
+        <h2>Delivery Address</h2>
+
+        <form id="checkoutForm">
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="tel"
+                id="mobile"
+                placeholder="Mobile Number"
+                required>
+
+            <textarea
+                id="address"
+                placeholder="Full Address"
+                required></textarea>
+
+            <input
+                type="text"
+                id="city"
+                placeholder="City"
+                required>
+
+            <input
+                type="text"
+                id="pincode"
+                placeholder="Pincode"
+                required>
+
+        </form>
+
+    </div>
+
+    <!-- ================= PAYMENT METHOD ================= -->
+
+    <div class="checkout-box">
+
+        <h2>Payment Method</h2>
+
+        <label>
+
+            <input
+                type="radio"
+                name="payment"
+                value="UPI">
+
+            UPI
+
+        </label>
+
+        <br><br>
+
+        <label>
+
+            <input
+                type="radio"
+                name="payment"
+                value="Credit / Debit Card">
+
+            Credit / Debit Card
+
+        </label>
+
+        <br><br>
+
+        <label>
+
+            <input
+                type="radio"
+                name="payment"
+                value="Net Banking">
+
+            Net Banking
+
+        </label>
+
+        <br><br>
+
+        <label>
+
+            <input
+                type="radio"
+                name="payment"
+                value="Cash On Delivery">
+
+            Cash On Delivery
+
+        </label>
+
+    </div>
+
+    <!-- ================= PLACE ORDER ================= -->
+
+    <div class="place-order">
+
+        <button id="placeOrderBtn">
+
+            Place Order
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <p>
+
+        &copy; 2025 Kanya House of Sarees. All Rights Reserved.
+
+    </p>
+
+    <div class="footer-links">
+
+        <a href="faqs.html">FAQs</a>
+
+        <a href="contactus.html">Contact Us</a>
+
+        <a href="terms.html">Terms & Conditions</a>
+
+        <a href="privacy.html">Privacy Policy</a>
+
+        <a href="about.html">About Us</a>
+
+    </div>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/checkout.js"></script>
+
+</body>
+
+</html>

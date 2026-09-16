@@ -220,7 +220,7 @@ def forgot_password(request):
         token = default_token_generator.make_token(user)
 
         reset_link = (
-            f"http://127.0.0.1:5500/frontend/pages/reset-password.html"
+            f"https://kanya-sarees-frontend.onrender.com/reset-password.html"
             f"?uid={uid}&token={token}"
         )
 

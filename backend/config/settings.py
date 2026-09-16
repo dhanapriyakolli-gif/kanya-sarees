@@ -160,8 +160,8 @@ if not DEBUG:
     }
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",
+    "https://kanya-sarees-frontend.onrender.com",
 ]
-
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration

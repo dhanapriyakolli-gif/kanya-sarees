@@ -255,24 +255,29 @@ def forgot_password(request):
             )
         }
 
-        response = requests.post(
-            "https://api.brevo.com/v3/smtp/email",
-            headers={
-                "accept": "application/json",
-                "api-key": brevo_api_key,
-                "content-type": "application/json"
-            },
-            json=email_data,
-            timeout=10
-        )
+        try:
+            response = requests.post(
+                "https://api.brevo.com/v3/smtp/email",
+                headers={
+                    "accept": "application/json",
+                    "api-key": brevo_api_key,
+                    "content-type": "application/json"
+                },
+                json=email_data,
+                timeout=10
+            )
 
-        if not response.ok:
             print(
-                "Brevo email error:",
+                "Brevo response:",
                 response.status_code,
                 response.text
             )
 
+        except requests.RequestException as error:
+            print(
+                "Brevo request error:",
+                str(error)
+            )
     return Response(
         {
             'message': (

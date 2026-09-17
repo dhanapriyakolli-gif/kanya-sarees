@@ -4,7 +4,7 @@ from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 import os
-import resend
+import requests
 
 from django.utils.http import (
     urlsafe_base64_encode,
@@ -194,7 +194,6 @@ def get_profile(request):
         },
         status=200
     )
-
 @api_view(['POST'])
 def forgot_password(request):
 
@@ -224,20 +223,55 @@ def forgot_password(request):
             f"?uid={uid}&token={token}"
         )
 
-        resend.api_key = os.getenv('RESEND_API_KEY')
+        brevo_api_key = os.getenv('BREVO_API_KEY')
 
-        resend.Emails.send({
-            "from": "Kanya House of Sarees <onboarding@resend.dev>",
-            "to": [user.email],
+        email_data = {
+            "sender": {
+                "name": "Kanya House of Sarees",
+                "email": "support.kanyahousesarees@gmail.com"
+            },
+            "to": [
+                {
+                    "email": user.email
+                }
+            ],
             "subject": "Kanya House of Sarees - Password Reset",
-            "html": (
+            "htmlContent": (
                 "<p>Hello,</p>"
                 "<p>You requested to reset your password.</p>"
-                f"<p><a href='{reset_link}'>Click here to reset your password</a></p>"
+                f"<p><a href='{reset_link}'>"
+                "Click here to reset your password"
+                "</a></p>"
                 "<p>If you did not request this, you can ignore this email.</p>"
                 "<p>Regards,<br>Kanya House of Sarees</p>"
+            ),
+            "textContent": (
+                "Hello,\n\n"
+                "You requested to reset your password.\n\n"
+                f"Reset your password using this link:\n{reset_link}\n\n"
+                "If you did not request this, you can ignore this email.\n\n"
+                "Regards,\n"
+                "Kanya House of Sarees"
             )
-        })
+        }
+
+        response = requests.post(
+            "https://api.brevo.com/v3/smtp/email",
+            headers={
+                "accept": "application/json",
+                "api-key": brevo_api_key,
+                "content-type": "application/json"
+            },
+            json=email_data,
+            timeout=10
+        )
+
+        if not response.ok:
+            print(
+                "Brevo email error:",
+                response.status_code,
+                response.text
+            )
 
     return Response(
         {

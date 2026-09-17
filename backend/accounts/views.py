@@ -3,7 +3,8 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
-from django.core.mail import send_mail
+import os
+import resend
 
 from django.utils.http import (
     urlsafe_base64_encode,
@@ -194,7 +195,6 @@ def get_profile(request):
         status=200
     )
 
-
 @api_view(['POST'])
 def forgot_password(request):
 
@@ -224,21 +224,20 @@ def forgot_password(request):
             f"?uid={uid}&token={token}"
         )
 
-        send_mail(
-            subject='Kanya House of Sarees - Password Reset',
-            message=(
-                'Hello,\n\n'
-                'You requested to reset your password.\n\n'
-                'Click the link below to reset your password:\n\n'
-                f'{reset_link}\n\n'
-                'If you did not request this, you can ignore this email.\n\n'
-                'Regards,\n'
-                'Kanya House of Sarees'
-            ),
-            from_email=None,
-            recipient_list=[user.email],
-            fail_silently=False
-        )
+        resend.api_key = os.getenv('RESEND_API_KEY')
+
+        resend.Emails.send({
+            "from": "Kanya House of Sarees <onboarding@resend.dev>",
+            "to": [user.email],
+            "subject": "Kanya House of Sarees - Password Reset",
+            "html": (
+                "<p>Hello,</p>"
+                "<p>You requested to reset your password.</p>"
+                f"<p><a href='{reset_link}'>Click here to reset your password</a></p>"
+                "<p>If you did not request this, you can ignore this email.</p>"
+                "<p>Regards,<br>Kanya House of Sarees</p>"
+            )
+        })
 
     return Response(
         {

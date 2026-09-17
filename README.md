@@ -1,78 +1,134 @@
 # Kanya House of Sarees
 
-A full-stack saree e-commerce web application built with **HTML, CSS, JavaScript, Python, Django, Django REST Framework, MySQL, and PostgreSQL**.
+A full-stack saree e-commerce web application built with **HTML, CSS, JavaScript, Python, Django, Django REST Framework, MySQL, PostgreSQL, and REST APIs**.
 
-The application includes authentication, product browsing, category filtering, cart and wishlist functionality, checkout, order management, stock validation, and a Django admin dashboard.
+The application includes authentication, product browsing, category filtering, cart and wishlist functionality, checkout, order management, stock validation, profile management, password reset through Brevo, Cloudinary image storage, and a Django admin dashboard.
 
 ## Overview
 
-Kanya House of Sarees allows users to browse sarees by category, view product details, manage their cart and wishlist, create an account, place orders, and manage their profile.
+Kanya House of Sarees allows users to:
 
-The frontend is built with HTML, CSS, and JavaScript. The backend is built with Python, Django, and Django REST Framework.
+* Browse sarees by category
+* View product details
+* Create an account and log in
+* Manage their profile
+* Add products to the cart
+* Add products to the wishlist
+* Validate stock availability
+* Complete checkout
+* Place and view orders
+* View order details
+* Reset their password through email
 
-MySQL is used during local development, while PostgreSQL is used in production through Neon.
+The frontend is built with **HTML, CSS, and JavaScript**.
+
+The backend is built with **Python, Django, and Django REST Framework** and exposes REST API endpoints consumed by the frontend.
+
+**MySQL** is used for local development, while **PostgreSQL** is used in production through **Neon**.
 
 ## Features
 
-- User registration and login
-- Forgot-password and password-reset functionality
-- Product browsing
-- Product category filtering
-- Product details
-- Shopping cart
-- Add, update, and remove cart items
-- Wishlist functionality
-- Stock availability validation
-- Quantity validation based on available stock
-- Checkout process
-- Order placement
-- Order history
-- Order details
-- User profile management
-- REST API integration
-- Django admin dashboard
-- Responsive design
+* User registration and login
+* Password validation
+* Forgot-password functionality
+* Password reset through Brevo email API
+* Product browsing
+* Product category filtering
+* Product details
+* Shopping cart
+* Add, update, and remove cart items
+* Wishlist functionality
+* Stock availability validation
+* Quantity validation based on available stock
+* Checkout process
+* Order placement
+* Order history
+* Order details
+* User profile management
+* Protected pages for authenticated users
+* REST API integration
+* Django admin dashboard
+* Responsive frontend design
 
 ## Live Demo
 
-- Frontend: [https://kanya-sarees-frontend.onrender.com](https://kanya-sarees-frontend.onrender.com)
-- Backend API: [https://kanya-sarees-backend.onrender.com/api/products/](https://kanya-sarees-backend.onrender.com/api/products/)
-- Django Admin: [https://kanya-sarees-backend.onrender.com/admin/](https://kanya-sarees-backend.onrender.com/admin/)
+**Frontend:**
+https://kanya-sarees-frontend.onrender.com
+
+**Backend API:**
+https://kanya-sarees-backend.onrender.com/api/products/
+
+**Django Admin:**
+https://kanya-sarees-backend.onrender.com/admin/
 
 ## Technology Stack
 
 ### Frontend
 
-- HTML5
-- CSS3
-- JavaScript
+* HTML5
+* CSS3
+* JavaScript
 
 ### Backend
 
-- Python
-- Django
-- Django REST Framework
+* Python
+* Django
+* Django REST Framework
 
 ### Database
 
-- MySQL — local development
-- PostgreSQL — production database using Neon
+* MySQL — local development
+* PostgreSQL — production through Neon
 
-### Deployment
+### Email
 
-- Render
+* Brevo Transactional Email API
 
 ### Storage
 
-- Cloudinary — product image storage in production
+* Cloudinary — product image storage in production
+
+### Deployment
+
+* Render
 
 ### Development Tools
 
-- Visual Studio Code
-- Git
-- GitHub
-- GitHub Desktop
-- Postman
+* Visual Studio Code
+* Git
+* GitHub
+* GitHub Desktop
+* Postman
+
+## Project Architecture
+
+```text
+Frontend
+   ↓
+Django REST API
+   ↓
+PostgreSQL / MySQL
+   ↓
+Authentication
+   ↓
+Products
+   ↓
+Cart
+   ↓
+Wishlist
+   ↓
+Checkout
+   ↓
+Orders
+```
+
+External services:
+
+```text
+Django
+ ├── Brevo → Password reset emails
+ └── Cloudinary → Product image storage
+```
 
 ## Project Structure
 
@@ -90,7 +146,9 @@ kanya-sarees/
 │   │
 │   ├── config/
 │   ├── products/
-│   └── manage.py
+│   ├── manage.py
+│   ├── products_data.json
+│   └── upload_images.py
 │
 ├── frontend/
 │   ├── assets/
@@ -101,28 +159,33 @@ kanya-sarees/
 │   └── pages/
 │
 ├── screenshots/
-│
 ├── .gitignore
 └── README.md
 ```
 
 The `create_admin.py` custom management command is used to create an admin user for the deployed application.
 
+The `products_data.json` file contains product fixture data, while `upload_images.py` is used to upload product images to Cloudinary.
+
 ## API Endpoints
 
 ### Product Endpoints
 
-- Retrieve all products — GET `/api/products/`
-- Retrieve a specific product — GET `/api/products/<id>/`
+| Method | Endpoint              | Description                 |
+| ------ | --------------------- | --------------------------- |
+| GET    | `/api/products/`      | Retrieve all products       |
+| GET    | `/api/products/<id>/` | Retrieve a specific product |
 
 ### Authentication and Account Endpoints
 
-- Create a new account — POST `/api/accounts/signup/`
-- Log in a user — POST `/api/accounts/login/`
-- Retrieve the user profile — GET `/api/accounts/profile/`
-- Update the user profile — POST `/api/accounts/update-profile/`
-- Request a password reset — POST `/api/accounts/forgot-password/`
-- Reset the password — POST `/api/accounts/reset-password/`
+| Method | Endpoint                         | Description                               |
+| ------ | -------------------------------- | ----------------------------------------- |
+| POST   | `/api/accounts/signup/`          | Create a new account                      |
+| POST   | `/api/accounts/login/`           | Log in a user                             |
+| GET    | `/api/accounts/profile/`         | Retrieve the authenticated user's profile |
+| POST   | `/api/accounts/update-profile/`  | Update the authenticated user's profile   |
+| POST   | `/api/accounts/forgot-password/` | Request a password reset                  |
+| POST   | `/api/accounts/reset-password/`  | Reset the password                        |
 
 ## Installation and Setup
 
@@ -133,7 +196,7 @@ git clone https://github.com/dhanapriyakolli-gif/kanya-sarees.git
 cd kanya-sarees
 ```
 
-### 2. Navigate to the Backend Folder
+### 2. Navigate to the Backend
 
 ```bash
 cd backend
@@ -161,27 +224,27 @@ pip install -r requirements.txt
 
 ### 6. Configure Environment Variables
 
-Create a `.env` file inside the backend folder or configure the required environment variables according to the Django settings.
+Create a `.env` file inside the `backend` folder for local development.
 
-These may include:
+The project uses environment variables for sensitive configuration such as:
 
-- Django secret key
-- Database credentials
-- Database URL
-- Cloudinary credentials
-- Email configuration
+* Django secret key
+* Database credentials
+* Production database URL
+* Cloudinary credentials
+* Brevo API key
 
-Do not upload passwords, secret keys, database URLs, Cloudinary credentials, or email credentials to GitHub.
+Never upload `.env`, passwords, API keys, database credentials, or other secrets to GitHub.
 
-### 7. Configure the Database
+### 7. Configure the Local Database
 
-For local development, create a MySQL database named:
+Create a MySQL database named:
 
 ```text
 kanya_sarees
 ```
 
-Configure the database credentials in the Django settings or environment variables.
+Configure the required database credentials through your environment variables.
 
 For production, the project uses PostgreSQL through Neon.
 
@@ -208,7 +271,7 @@ http://127.0.0.1:8000/
 
 Open the frontend folder in Visual Studio Code and run it using a local development server such as the VS Code Live Server extension.
 
-Example frontend URL:
+Example:
 
 ```text
 http://127.0.0.1:5500/frontend/pages/
@@ -216,13 +279,13 @@ http://127.0.0.1:5500/frontend/pages/
 
 ## Deployment
 
-The application is deployed using the following services:
+The application is deployed using:
 
-- Frontend hosted on Render
-- Django backend hosted on Render
-- PostgreSQL production database hosted through Neon
-- Product images stored using Cloudinary
-- Django admin dashboard available through the deployed backend
+* **Render** — frontend hosting
+* **Render** — Django backend hosting
+* **Neon** — production PostgreSQL database
+* **Cloudinary** — product image storage
+* **Brevo** — transactional password-reset emails
 
 ## Screenshots
 
@@ -272,5 +335,4 @@ The application is deployed using the following services:
 
 ## GitHub Repository
 
-
-[GitHub Repository](https://github.com/dhanapriyakolli-gif/kanya-sarees.git)
+https://github.com/dhanapriyakolli-gif/kanya-sarees.git

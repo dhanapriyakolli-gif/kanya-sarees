@@ -1,0 +1,626 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Soft Silk Saree",
+    "price": "999.00",
+    "category": "Silk",
+    "image": "products/soft_silk.png",
+    "description": "Elegant saree",
+    "stock": 0,
+    "created_at": "2026-08-12T10:47:44.681Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Premium Silk Saree",
+    "price": "1299.00",
+    "category": "Silk",
+    "image": "products/premium_silk.jpg",
+    "description": "Premium silk saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:07:41.310Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Royal Silk Saree",
+    "price": "2000.00",
+    "category": "Silk",
+    "image": "products/royal_silk.jpg",
+    "description": "Royal silk saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:09:29.748Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Wedding Silk Saree",
+    "price": "3199.00",
+    "category": "Silk",
+    "image": "products/wedding_silk.jpg",
+    "description": "Wedding Silk Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:10:44.054Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Designer Silk Saree",
+    "price": "1898.96",
+    "category": "Silk",
+    "image": "products/designersilk.jpg",
+    "description": "Designer silk saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:12:49.693Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "name": "Traditional Silk Saree",
+    "price": "1899.00",
+    "category": "Silk",
+    "image": "products/traditional_silk.jpg",
+    "description": "Traditional silk saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:14:03.909Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "name": "Banarasi Silk Saree",
+    "price": "898.97",
+    "category": "Silk",
+    "image": "products/banarasisilk.jpg",
+    "description": "Banarasi Silk saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:15:11.661Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "name": "Pure Kanchipuram Silk Saree",
+    "price": "1000.20",
+    "category": "Silk",
+    "image": "products/purekanchivaram.jpg",
+    "description": "Pure kanchivaram silk saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:16:22.726Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "name": "Pure Handloom Cotton Saree",
+    "price": "999.97",
+    "category": "Cotton",
+    "image": "products/handloom.jpg",
+    "description": "Handloom saree",
+    "stock": 9,
+    "created_at": "2026-09-03T10:22:59.624Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "name": "Soft Printed Cotton Saree",
+    "price": "798.98",
+    "category": "Cotton",
+    "image": "products/softprinted.jpg",
+    "description": "Soft printed saree",
+    "stock": 9,
+    "created_at": "2026-09-03T10:24:16.943Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "name": "Traditional Cotton Saree",
+    "price": "1298.97",
+    "category": "Cotton",
+    "image": "products/traditional.jpg",
+    "description": "Traditional saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:25:21.501Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "name": "Floral Design Cotton Saree",
+    "price": "950.00",
+    "category": "Cotton",
+    "image": "products/floral.jpg",
+    "description": "Floral saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:26:19.404Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "name": "Elegant Daily wear Cotton saree",
+    "price": "849.97",
+    "category": "Cotton",
+    "image": "products/dailywaer.jpg",
+    "description": "Elegant Daily wear saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:27:30.239Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "name": "Designer Cotton saree",
+    "price": "1299.00",
+    "category": "Cotton",
+    "image": "products/desginer.jpg",
+    "description": "Designer Cotton saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:28:35.007Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "name": "Premium Cotton Saree",
+    "price": "1089.97",
+    "category": "Cotton",
+    "image": "products/preium.jpg",
+    "description": "Premium Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:29:33.821Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "name": "Classic Cotton Saree",
+    "price": "799.95",
+    "category": "Cotton",
+    "image": "products/classy.jpg",
+    "description": "Classic cotton saree",
+    "stock": 10,
+    "created_at": "2026-09-03T10:30:29.934Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "name": "Floral Chiffon Saree",
+    "price": "899.00",
+    "category": "Chiffon",
+    "image": "products/floral_chiffon.jpg",
+    "description": "Floral Chiffon saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:45:35.678Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "name": "Printed Chiffon Saree",
+    "price": "998.93",
+    "category": "Chiffon",
+    "image": "products/printed_chiffon.jpg",
+    "description": "Printed Chiffon",
+    "stock": 10,
+    "created_at": "2026-09-03T11:46:26.558Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "name": "Elegant Chiffon Saree",
+    "price": "1298.97",
+    "category": "Chiffon",
+    "image": "products/elgenat.jpg",
+    "description": "Elegant Chiffon",
+    "stock": 10,
+    "created_at": "2026-09-03T11:47:19.745Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "name": "Party Wear Chiffon Saree",
+    "price": "1199.00",
+    "category": "Chiffon",
+    "image": "products/party_chiffon.jpg",
+    "description": "Party Wear chiffon saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:48:10.243Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "name": "Designer Chiffon Saree",
+    "price": "998.99",
+    "category": "Chiffon",
+    "image": "products/desinger_chiffon.jpg",
+    "description": "Designer Chiffon Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:49:00.542Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "name": "Soft Chiffon Saree",
+    "price": "789.00",
+    "category": "Chiffon",
+    "image": "products/soft_chiffon.jpg",
+    "description": "Soft Chiffon Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:49:46.507Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "name": "Embroidery Chiffon Saree",
+    "price": "1898.99",
+    "category": "Chiffon",
+    "image": "products/embrioded_chiffon.jpg",
+    "description": "Embroidery Chiffon Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:50:55.893Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "name": "Premium Chiffon Saree",
+    "price": "1400.00",
+    "category": "Chiffon",
+    "image": "products/premium_chiffon.jpg",
+    "description": "Premium Chiffon Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:51:52.771Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 25,
+  "fields": {
+    "name": "Printed Georgette Saree",
+    "price": "1089.99",
+    "category": "Georgette",
+    "image": "products/printed_saree.jpg",
+    "description": "Printed Georgette Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:54:02.829Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "name": "Embroidered Georgette Saree",
+    "price": "1898.97",
+    "category": "Georgette",
+    "image": "products/embordy.jpg",
+    "description": "Embroidered Georgette Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:55:11.329Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 27,
+  "fields": {
+    "name": "Party Wear Georgette Saree",
+    "price": "1799.00",
+    "category": "Georgette",
+    "image": "products/patry_wear.jpg",
+    "description": "Georgette Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:56:06.502Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 28,
+  "fields": {
+    "name": "Designer Georgette Saree",
+    "price": "2999.00",
+    "category": "Georgette",
+    "image": "products/designer.jpg",
+    "description": "Designer Georgette Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:58:11.589Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 29,
+  "fields": {
+    "name": "Floral Georgette Saree",
+    "price": "999.97",
+    "category": "Georgette",
+    "image": "products/floral_XKm2uxL.jpg",
+    "description": "Floral Georgette Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T11:59:05.391Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 30,
+  "fields": {
+    "name": "Soft Georgette Saree",
+    "price": "698.97",
+    "category": "Georgette",
+    "image": "products/soft.jpg",
+    "description": "Soft Georgette Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:00:07.441Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 31,
+  "fields": {
+    "name": "Wedding  Georgette Saree",
+    "price": "1699.02",
+    "category": "Georgette",
+    "image": "products/wedding.jpg",
+    "description": "Wedding  Georgette Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:00:44.862Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 32,
+  "fields": {
+    "name": "Georgette Saree",
+    "price": "899.00",
+    "category": "Georgette",
+    "image": "products/premium.jpg",
+    "description": "Premium Georgette Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:01:28.206Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 33,
+  "fields": {
+    "name": "Kanchipuram Pattu saree",
+    "price": "3499.98",
+    "category": "Pattu",
+    "image": "products/kanchipuram.jpg",
+    "description": "Kanchipuram Pattu saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:04:15.965Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 34,
+  "fields": {
+    "name": "Bridal  Pattu  Saree",
+    "price": "6599.00",
+    "category": "Pattu",
+    "image": "products/bridal_pattu.jpg",
+    "description": "Bridal  Pattu  Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:05:13.759Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 35,
+  "fields": {
+    "name": "Traditional Pattu Saree",
+    "price": "3000.00",
+    "category": "pattu",
+    "image": "products/traditional_FzLJ0I9.jpg",
+    "description": "Traditional Pattu Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:06:24.875Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 36,
+  "fields": {
+    "name": "Designer Pattu saree",
+    "price": "6999.00",
+    "category": "Pattu",
+    "image": "products/designerpattu.jpg",
+    "description": "Designer Pattu saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:07:13.236Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 37,
+  "fields": {
+    "name": "Wedding Pattu Saree",
+    "price": "8998.99",
+    "category": "Pattu",
+    "image": "products/wedding_pattu.jpg",
+    "description": "Wedding Pattu Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:07:49.334Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 38,
+  "fields": {
+    "name": "Gloden Border pattu Saree",
+    "price": "5999.00",
+    "category": "Pattu",
+    "image": "products/golden_border.jpg",
+    "description": "Gloden Border pattu Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:09:03.268Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 39,
+  "fields": {
+    "name": "Royal Pattu Saree",
+    "price": "2999.00",
+    "category": "Pattu",
+    "image": "products/royal_pattu.jpg",
+    "description": "Royal Pattu Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:09:49.289Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 40,
+  "fields": {
+    "name": "Premium Pattu Saree",
+    "price": "7500.00",
+    "category": "Pattu",
+    "image": "products/premium_saree.jpg",
+    "description": "Premium Pattu Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:10:32.037Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 41,
+  "fields": {
+    "name": "Modern Designer Saree",
+    "price": "3999.00",
+    "category": "Designer",
+    "image": "products/modern.jpg",
+    "description": "Modern Designer Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:12:59.250Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 42,
+  "fields": {
+    "name": "Party Wear Designer Saree",
+    "price": "4998.98",
+    "category": "Designer",
+    "image": "products/party.jpg",
+    "description": "Party Designer Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:14:55.737Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 43,
+  "fields": {
+    "name": "Embroidery Designer Saree",
+    "price": "4985.00",
+    "category": "Designer",
+    "image": "products/embroided.jpg",
+    "description": "Embroidery Designer Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:16:12.939Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 44,
+  "fields": {
+    "name": "Bridal Designer Saree",
+    "price": "6490.00",
+    "category": "Designer",
+    "image": "products/bridal.jpg",
+    "description": "Bridal Designer Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:17:25.770Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 45,
+  "fields": {
+    "name": "Luxury Designer  Saree",
+    "price": "6590.00",
+    "category": "Designer",
+    "image": "products/luxury.jpg",
+    "description": "Luxury Designer  Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:19:12.171Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 46,
+  "fields": {
+    "name": "Trendy Designer Saree",
+    "price": "5498.95",
+    "category": "Designer",
+    "image": "products/trendy.png",
+    "description": "Trendy Designer Saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:19:59.369Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 47,
+  "fields": {
+    "name": "Fashion Designer saree",
+    "price": "7498.96",
+    "category": "Designer",
+    "image": "products/fashion.png",
+    "description": "Fashion Designer saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:21:00.746Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 48,
+  "fields": {
+    "name": "Premium Designer saree",
+    "price": "1199.00",
+    "category": "Designer",
+    "image": "products/premium_q69EybO.jpg",
+    "description": "Premium Designer saree",
+    "stock": 10,
+    "created_at": "2026-09-03T12:23:01.417Z"
+  }
+}
+]

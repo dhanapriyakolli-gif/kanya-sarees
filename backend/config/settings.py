@@ -169,3 +169,21 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
 }
+
+if not DEBUG:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
+    SECURE_PROXY_SSL_HEADER = (
+        'HTTP_X_FORWARDED_PROTO',
+        'https'
+    )
+
+    SECURE_HSTS_SECONDS = 3600
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = False
+
+    SILENCED_SYSTEM_CHECKS = [
+        'security.W008',
+        'security.W021',
+    ]
